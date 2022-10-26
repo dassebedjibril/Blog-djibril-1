@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Programmation Orientée Objet (POO) avec Python</title>
+
+  <meta property="description" itemprop="description" content="Description détaillée pour les debutants en Programmation Orientée Objet."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-10-26"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-10-26"/>
+  <meta name="article:author" content="Djibril Dassebe"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Programmation Orientée Objet (POO) avec Python"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Description détaillée pour les debutants en Programmation Orientée Objet."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Programmation Orientée Objet (POO) avec Python"/>
+  <meta property="twitter:description" content="Description détaillée pour les debutants en Programmation Orientée Objet."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Programmation Orientée Objet (POO) avec Python"]},{"type":"character","attributes":{},"value":["Description détaillée pour les debutants en Programmation Orientée Objet.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Djibril Dassebe"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]}]}]},{"type":"character","attributes":{},"value":["10-26-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["img1.jpeg","img10.png","img11.png","img12.png","img13.png","img14.png","img15.png","img16.png","img17.png","img18.jpeg","img19.png","img20.png","img21.jpg","img22.jpeg","img23.jpg","img24.png","img25.png","img3.jpeg","img4.jpeg","img5.jpeg","img6.png","img7.png","img8.png","img9.png","Screenshot 2022-10-25 at 18.27.55.png","welcome_files/anchor-4.2.2/anchor.min.js","welcome_files/bowser-1.9.3/bowser.min.js","welcome_files/distill-2.2.21/template.v2.js","welcome_files/header-attrs-2.17/header-attrs.js","welcome_files/jquery-3.6.0/jquery-3.6.0.js","welcome_files/jquery-3.6.0/jquery-3.6.0.min.js","welcome_files/jquery-3.6.0/jquery-3.6.0.min.map","welcome_files/popper-2.6.0/popper.min.js","welcome_files/tippy-6.2.7/tippy-bundle.umd.min.js","welcome_files/tippy-6.2.7/tippy-light-border.css","welcome_files/tippy-6.2.7/tippy.css","welcome_files/tippy-6.2.7/tippy.umd.min.js","welcome_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="welcome_files/header-attrs-2.17/header-attrs.js"></script>
+  <script src="welcome_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="welcome_files/popper-2.6.0/popper.min.js"></script>
+  <link href="welcome_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="welcome_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="welcome_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="welcome_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="welcome_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="welcome_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="welcome_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Programmation Orientée Objet (POO) avec Python","description":"Description détaillée pour les debutants en Programmation Orientée Objet.","authors":[{"author":"Djibril Dassebe","authorURL":"https://example.com/norajones","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-10-26T00:00:00.000+02:00","citationText":"Dassebe, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Programmation Orientée Objet (POO) avec Python</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>Description détaillée pour les debutants en Programmation Orientée Objet.</p></p>
+</div>
+
+<div class="d-byline">
+  Djibril Dassebe <a href="https://example.com/norajones" class="uri">https://example.com/norajones</a> 
+  
+<br/>10-26-2022
+</div>
+
+<div class="d-article">
+<h2 id="attributs-et-méthodes">Attributs et Méthodes</h2>
+<p>Nous savons qu’une classe se décrit par ses attributs et ses méthodes. Pour notre classe Point, quels sont ses attributs et ses méthodes?</p>
+<center>
+<img src="img1.jpeg" style="width:60.0%" />
+</center>
+<p>Et bien pour les identifier, il nous faut passer par la phase de conception qui est présente dans tous les projets de développement. Explicitons les étapes de la conception qui nous mène au code.</p>
+<p>En général la conception d’une classe se fait souvent à partir des objets réels, des idées ou des concepts métiers. En analysant les objets réels on crée un concept, une abstraction qui modélise la réalité. Un point est une abstraction mathématique qui modélise la position des objets. À partir de ce concept mathématique, le concept métier, le développeur crée une autre abstraction cette fois informatique qui représente le concept métier en tant qu’une classe s’il travaille dans le paradigme orienté objet. On parle parfois de classe concepts. Toutes ces représentations sont conceptuelles, elles ne sont liées pour le moment à aucun langage.</p>
+<center>
+<img src="img3.jpeg" style="width:80.0%" />
+</center>
+<p>C’est à l’étape de l’implémentation que le développeur traduit la conception d’une classe dans un code concret avec un langage choisi. Avec le point géométrique nous avons de la chance parce que la première étape a déjà été faite pour nous, notamment par Euclide. Nous pouvons nous baser simplement sur sa conception. Le point, selon Euclide, est ce qui n’a aucune partie. Un point désigne un <code>emplacement</code>. Sa seule caractéristique est sa <code>position</code>.
+Dans l’espace euclidien à deux dimensions, la position est décrite par deux coordonnées <code>x</code> et <code>y</code> qui sont ici les <strong>attributs</strong> de la classe Point. Les <strong>méthodes</strong>définissent les actions possibles avec les points. Nous avons par exemple les méthodes <code>reset()</code> qui ramène tout point à l’origine, la méthode <code>shift(dx, dy)</code> qui réalise les déplacements élémentaires, <code>dx</code> et <code>dy</code> seront les <strong>arguments</strong> de cette méthode. On peut également ajouter la possibilité de calculer la distance entre deux points avec la méthode <code>calculate_distance(...)</code>.</p>
+<center>
+<img src="img4.jpeg" style="width:60.0%" />
+</center>
+<p>Nous pouvons donc considerer que la conception est terminee. Passons maintenant a l’implémentation.
+`</p>
+<h2 id="implémentation">Implémentation</h2>
+<p>Une classe en python se crée avec le mot-clé <code>class</code> suivi du nom de la classe. Par convention le nom de la classe commence par une majuscule et lorsqu’il est composé de plusieurs mots on utilise le style <em>CapWords</em>. Dans ce style les mots sont attachés et commencent par une majuscule comme MyClass, BankAccount, etc…</p>
+<center>
+<img src="img5.jpeg" style="width:40.0%" />
+</center>
+<p>La classe la plus simple c’est la classe vide qui n’a pas de contenu, pour cela on utilise le mot-clé <code>pass</code>. Notre première classe est créée pour l’instant elle est vide elle ne sait rien faire.</p>
+<p>l’objet <code>p</code> est une instance de la classe <code>Point</code>. Le type de la variable <code>p</code> est Point par contre il est précédé par le mot-clé <code>__main__</code> réservé dans python qui designe <em>module principal</em>. Nous avons défini la classe Point dans le programme principal. La classe est alors attachée au module <code>__main__</code>. On pourrait en théorie avoir un autre <code>module</code> avec une autre classe nommée Point définie dans ce module dans ce cas cette autre classe serait précédée par le nom du module et non par <code>__main__</code> ainsi il n’a pas de conflit de noms on pourrait éventuellement utiliser les deux classes <strong>Point</strong> dans le code.</p>
+<p>Si on imprime la variable <code>p</code> à l’écran, on obtient la représentation par défaut d’un objet en Pyhton. Il s’agit d’un objet de la classe Point défini dans le module <code>__main__</code> suivi de l’adresse de l’objet présentée en mémoire en hexadécimal.</p>
+<h2 id="definir-les-attributs-de-la-classe-point-sur-python">Definir les attributs de la classe Point sur python</h2>
+<p>Commençons à remplir progressivement le contenu de la classe. Comment définir les attributs ?
+Pour construire la classe Point, on utilise la méthode avec un nom prédéfini en Python qui<br />
+s’appelle <code>__init__</code> avec deux underscores avant et après. Cette méthode est le constructeur de<br />
+la classe <strong>Point</strong>, elle sera exécutée quand on instancie un objet de cette classe. C’est dans<br />
+cette méthode qu’on définit les attributs. Dans la signature du constructeur,<br />
+le premier argument doit obligatoirement être la référence à l’instance de la classe elle-même,<br />
+par convention appelée <code>self</code>. Dans certains langages, comme PHP, C++ ou Java,<br />
+on utilise le mot-clé <code>this</code>. En Python, Ruby, Objective-C, c’est self. En Visual Basic, on<br />
+utilise le mot-clé Me. <code>Self</code> signifie littéralement<br />
+soi-même. C’est la référence, à l’intérieur de la classe, à l’instance qu’on peut créer avec cette<br />
+classe. Autrement dit, quand on crée un <code>objet</code> de la classe <strong>Point</strong>, <code>self</code> référence cet objet.
+On donne ensuite d’autre arguments qui nous sont nécessaires pour construire un objet.<br />
+Pour un point, ce sont ses coordonnées : <code>x</code> et <code>y</code>. La ligne <code>self.x = x</code> signifie que pour tout<br />
+objet de la classe Point (référencé ici par le mot-clé <code>self</code>) on crée un attribut <code>x</code> et la<br />
+valeur de cet attribut sera égale à celle donnée en argument d’entrée de la méthode <code>__init__</code>.
+La même chose pour l’attribut <code>y</code>. Les arguments <code>x</code> et <code>y</code> sont maintenant obligatoires<br />
+pour instancier un objet de la classe <strong>Point</strong> parce que nous les avons explicitement définis<br />
+dans la signature du constructeur <code>__init__</code>.</p>
+<center>
+<img src="img6.png" style="width:40.0%" />
+</center>
+<p>Maintenant on peut instancier le point a,<br />
+en précisant directement ses coordonnées dans le constructeur. Quand on écrit cette ligne,<br />
+Python exécute le constructeur <strong>init</strong> qu’on vient de créer. Un développeur<br />
+lirait cette ligne de la façon suivante : a est un point avec les attributs x=1 et y=2.</p>
+<center>
+<img src="img7.png" style="width:35.0%" />
+</center>
+<p>Les attributs de l’objet sont accessibles avec l’opérateur “.”. On peut afficher le<br />
+contenu des attributs du point <code>a</code> : <code>a.x</code> et <code>a.y</code>.</p>
+<center>
+<img src="img8.png" style="width:35.0%" />
+</center>
+<p>Une classe permet d’instancier plusieurs objets<br />
+du même type. Il est tout à fait possible de créer un deuxième point <code>b</code> avec les coordonnées<br />
+<code>x=5</code> et <code>y=9</code>. Avec <code>b.x</code> et <code>b.y</code> on accède aux valeurs des attributs <code>x</code> et <code>y</code> du point <code>b</code>.</p>
+<center>
+<img src="img9.png" style="width:30.0%" />
+</center>
+<p>Il est possible de modifier directement les attributs de l’objet, en écrivant,<br />
+par exemple, b.x=7 et b.y=8. On change ainsi les coordonnées du point b.</p>
+<center>
+<img src="img10.png" style="width:30.0%" />
+</center>
+<p>Cette façon d’écrire peut choquer profondément les développeurs qui ont l’habitude de travailler dans<br />
+d’autres langages, comme C++, Java ou PHP. Il se trouve que dans le paradigme orienté objet,<br />
+il existe le principe d’encapsulation qui suggère de protéger l’état interne<br />
+de l’objet des accès extérieurs directs.</p>
+<p>Au moins, ces accès doivent être contrôlés.
+Dans beaucoup de langages orientés objets, la politique est restrictive : par défaut, on<br />
+interdit tous les accès et on autorise seulement certain accès quand c’est nécessaire. Python a la<br />
+politique inverse. Tous les accès sont publics. Si le développeur pense que certains attributs<br />
+doivent être protégés, il existe des conventions qui lui permettent de l’indiquer dans le code.</p>
+<h2 id="remarque">Remarque</h2>
+<p>Dans la plupart des langages orientés objets classiques, comme <code>C++</code> ou <code>Java</code>, l’accès direct aux attributs <code>(par exemple, b.x = 7)</code> est fortement déconseillé, voire interdit, pour respecter le principe <code>encapsulation</code>. Dans ces langages, il est habituellement nécessaire de définir des méthodes spécifiques (<strong>getters</strong> et <strong>setters</strong>) pour manipuler les attributs. En Python, les attributs des objets sont
+par défaut publiques et peuvent être accédés directement. Il existe toutefois des conventions en Python qui permettent d’indiquer
+explicitement qu’un <em>attribut est interne à l’objet</em> et qu’il ne doit pas être accédé directement même si techniquement cela reste possible.</p>
+<p>Vous vous souvenez que dans le constructeur de la classe nous avons imposé deux arguments d’entrée : x et y. Cela veut dire que nous<br />
+ne pouvons plus instancier un point sans donner d’argument. Notamment, le code <code>p = Point()</code> sans arguments produit une erreur parce que les arguments <code>x</code> et <code>y</code> sont justement manquants.</p>
+<center>
+<img src="img11.png" style="width:50.0%" />
+</center>
+<p>Ce n’est pas toujours très pratique. Il serait bien de pouvoir créer un point sans arguments<br />
+en considérant qu’il sera initialisé par défaut à l’origine du repère : <code>x=0</code> et <code>y=0</code>. Pour cela,<br />
+il est possible de définir des valeurs par défaut pour les attributs. On peut le faire<br />
+dans la signature du constructeur en précisant les valeurs par défaut pour chaque argument.</p>
+<center>
+<img src="img12.png" style="width:50.0%" />
+</center>
+<p>Si <code>x</code> et <code>y</code> ne sont pas précisés, le constructeur utilisera ces valeurs pour instancier l’objet.</p>
+<center>
+<img src="img13.png" style="width:35.0%" />
+</center>
+<p>Nous savons maintenant travailler avec les <strong>attributs</strong>. Il est temps d’attaquer les <strong>méthodes</strong>. Commençons par une méthode prédéfinie dans Python qui permet de représenter un objet.</p>
+<h2 id="definir-une-representation-de-lobjet">Definir une representation de l’objet</h2>
+<p>Commençons par une méthode prédéfinie dans Python qui permet de représenter un objet. Nous avons déjà remarqué que quand on souhaite afficher le contenu de l’objet à l’écran avec la commande print, on obtient: <code>p</code> est un objet Point du module <code>__main__</code> qui se trouve à telle adresse en mémoire. Or, dans la plupart des cas, quand on affiche un objet, on cherche à savoir l’état courant de l’objet, c’est-à-dire les valeurs courantes de ses attributs, plutôt que son adresse en mémoire. Dans notre cas, ce sont les coordonnées <code>x</code> et <code>y</code> du point <code>p</code>.</p>
+<p>Une autre information importante pour l’affichage est le type de l’objet. Si on travaille avec un grand nombre d’objets différents dans le programme, il est utile de rappeler à l’affichage le nom de la classe à laquelle appartient l’objet. Idéalement, on voudrait introduire une représentation de l’objet comme une chaine de caractères formattée qui contient le<br />
+nom de la classe et les valeurs des attributs</p>
+<center>
+<img src="img14.png" style="width:60.0%" />
+</center>
+<p>En Python, il existe la méthode spéciale <code>__repr__</code>, avec les doubles underscores, qui permet de redéfinir la représentation officielle de l’objet. <em>Il suffit d’intégrer cette méthode à l’intérieur de la classe et de préciser dans le corps de la méthode comment on souhaite représenter les objets de cette classe</em>. La commande print affiche la représentation qu’on souhaite ci dessous.</p>
+<center>
+<img src="img15.png" style="width:50.0%" />
+</center>
+<p>En Python, il existe en réalité plusieurs méthodes réservées à la représentation de l’objet, dont <code>__repr__</code>, <code>__str__</code> et <code>__format__</code>. Ces méthodes sont légèrement différentes et les développeurs sont parfois confus pour savoir laquelle de ces méthodes il faut utiliser dans leurs classes. Si vous souhaitez définir une seule représentation qui fonctionne dans<br />
+tous les cas, choisissez la méthode <code>__repr__</code>. Les méthodes que nous avons étudiées jusqu’à maintenant sont des méthodes prédéfinies dans Python, comme le constructeur <code>__init__</code> ou la représentation <code>__repr__</code>. On reconnait leur caractère interne réservé à Python par les doubles underscores dans le nom. Mais comment on peut créer nos propres méthodes qui n’existe pas dans Python ? Cela se fait de la façon similaire.</p>
+<p>A l’intérieur de la classe, on crée une méthode en lui donnant le nom qu’on souhaite, cette fois-ci sans les underscores. Par exemple, on peut définir la méthode <code>reset</code> qui remet le point à l’origine du repère, en modifiant ses coordonnées en <code>x=0, y=0</code>. Visuellement, on peut distinguer facilement les méthodes prédéfinies dans Python qui portent les underscores et les nouvelles méthodes définies par le développeur qui ont des noms habituels, sans les underscores.</p>
+<center>
+<img src="img16.png" style="width:55.0%" />
+</center>
+<p>Exceptionnellement, le développeur peut dans certains cas créer de nouvelles méthodes spéciales avec les underscores. Il s’agit des cas très particuliers. Dans la majorité des cas, nous n’en avons pas besoin.</p>
+<p>Pour utiliser notre nouvelle méthode <code>reset()</code>, créons d’abord un point p avec les coordonnées <code>x=3, y=4</code>. L’appelle de la méthode <code>reset()</code> se fait avec l’opérateur <code>« . »</code>, comme pour les attributs : <code>p.reset()</code>. A la différence des attributs, les méthodes sont appelées avec les parenthèses qui peuvent éventuellement contenir des arguments quand c’est nécessaire.
+L’appel de la méthode <code>reset()</code> remet le point <code>p</code> à l’origine du repère. On voit à l’affichage que ses<br />
+coordonnées sont devenues <code>x=0</code> et <code>y=0</code>.</p>
+<center>
+<img src="img17.png" style="width:55.0%" />
+</center>
+<p>Dans le vocabulaire orienté objet, on dit que le programme principal <code>__main__</code> a envoyé un message <code>reset()</code> à l’objet <code>p</code>. Cette<br />
+façon de parler est parfois un peu perturbante pour les développeurs. On se perd facilement dans qui envoie quel message à qui. Vous pouvez retenir qu’une méthode est vue comme la réception d’un message dans la programmation orientée objet. Pour un objet, exécuter une méthode est la même chose que recevoir un message.</p>
+<center>
+<img src="img18.jpeg" style="width:55.0%" />
+</center>
+<p>Dans notre cas, l’objet<code>p</code> reçoit un message qui s’appelle <code>reset()</code> de la part du programme principal. Suite<br />
+à ce message, il enclenche les actions qui sont décrites dans la méthode <code>reset()</code>, c’est-à-dire,<br />
+poser les attributs de l’objet <code>x=0</code> et <code>y=0</code>.</p>
+<p>Pour résumer, <code>p.reset()</code> se lit comme : <em>l’objet <code>p</code> reçoit un message <code>reset()</code></em>. L’objet <code>p</code> est le récepteur du message. L’expéditeur du message c’est l’objet dans lequel la ligne de code <code>p.reset()</code> est exécutée. Dans notre cas,<br />
+c’est le programme principal, le module <code>__main__</code>. Notre classe Point est presque complète maintenant. Nous avons des attributs et certaines méthodes. Nous pouvons peaufiner encore un tout petit peu sa présentation pour qu’on puisse la partager avec d’autres développeurs. Ils pourront ainsi intégrer notre classe Point dans leur code et le réutiliser.</p>
+<p>Quand on veut partager notre code, il est souvent nécessaire de créer la documentation. En Python, comme dans beaucoup d’autres langages, la documentation peut être intégrée dans le code et ensuite générée et exportée automatiquement dans différents formats. C’est une <strong>bonne pratique</strong> de créer la documentation à l’intérieur du code avec la notation <strong>docstring</strong>. On peut documenter une<br />
+<code>classe, une méthode, un module ou une fonction</code>. La documentation commence à la ligne suivante, tout de suite après le nom de la classe. Le texte est précédé et terminé par <code>trois guillemets</code>.</p>
+<p>La documentation docstring est reconnue automatiquement par Python. Elle est enregistrée dans un attribut spécial nommé <code>__doc__</code> avec les doubles underscores. Ces attributs sont exploités par des outils qui génèrent automatiquement la documentation, tels que <strong>pydoc</strong>. Il est également courant d’annoter les types de variables utilisées dans les<br />
+classes. Ces annotations sont ignorées à l’exécution par Python mais elles peuvent être exploitées notamment par l’outil <strong>mypy</strong> qui permet de travailler avec le <em>typage statique</em>.</p>
+<center>
+<img src="img19.png" style="width:55.0%" />
+</center>
+<p>Beaucoup de développeurs utilisent ces annotations pour tester leurs codes.
+Dans le constructeur on peut préciser que les variables <code>x</code> et <code>y</code> sont de type <strong>float</strong>. La<br />
+méthode <code>__init__</code> ne renvoie aucune valeur, son type de retour est <strong>None</strong>. En revanche,<br />
+la méthode <code>__repr__</code> renvoie un argument, il s’agit d’une <strong>chaine de caractère</strong> que représente l’objet. Son type de retour est <strong>str</strong>. On l’indique à chaque fois avec une <code>flèche</code>.</p>
+<center>
+<img src="img20.png" style="width:45.0%" />
+</center>
+<p>Pour s’entrainer à utiliser toutes ces nouvelles notions, faisons un petit exercice assez simple</p>
+<h2 id="exercice">Exercice</h2>
+<center>
+<img src="img21.jpg" style="width:55.0%" />
+</center>
+<h2 id="conception">Conception</h2>
+<center>
+<img src="img22.jpeg" style="width:75.0%" />
+</center>
+<center>
+<img src="img23.jpg" style="width:25.0%" />
+</center>
+<h2 id="implementation">Implementation</h2>
+<center>
+<img src="img24.png" style="width:50.0%" />
+</center>
+<center>
+<img src="img25.png" style="width:65.0%" />
+</center>
+<p>If you think, I missed something, please comment on it, and I’ll improve this tutorial.</p>
+<p><strong>Merci pour la lecture</strong></p>
+<hr />
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

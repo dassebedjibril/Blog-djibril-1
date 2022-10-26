@@ -1,0 +1,9 @@
+---
+title: "Programmation Orientée Objet avec Python"
+description: |
+  Dans l'apprentissage classique académique de la POO, on commence souvent par écrire la classe **`Point`** qui modélise un point géométrique. Nous allons donc décrire ensemble cette classe avec le langage python. Notre exemple a beaucoup d'avantages pédagogiques premièrement parce qu'on comprend mieux la notion de conception en POO mais aussi parce que cet exemple permet de construire une base solide pour l'apprentissage par la suite.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
